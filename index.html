@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang="ru" >
+<head>
+    <meta charset="UTF-8">
+    <title>Пиво игра</title>
+    <link rel="stylesheet" href="./style.css" charset="utf-8">
+</head>
+<body>
+    <meta charset="UTF-8">
+    <!-- partial:index.partial.html -->
+    <div class="init">
+        <div class="center1">
+            <h1>Ты нужен нам!</h1>
+            <p>Нажми на клетку, чтобы занять её алкоголем. Но поторопись, потому что кровь будет вытеснять его!</p>
+            <p class="floating bold">Начать противостояние!</p>
+        </div>
+    </div>
+    <div class="won">
+        <div class="center">
+            <h1>Ты выиграл!</h1>
+            <p class="floating replay bold">Следующая кружка пива</p>
+        </div>
+    </div>
+    <div class="init hidden"><h1 class="center">Активность организма повышается!</h1></div>
+    <h2 class="counter">Кружка номер <span id="count">1</span></h2>
+    <div class="container">
+        <div class="game"></div>
+    </div>
+    <!-- partial -->
+    <script src='https://cdn.jsdelivr.net/mojs/latest/mo.min.js' charset="utf-8"></script>
+    <script src="./script.js" charset="utf-8"></script>
+
+</body>
+</html>
