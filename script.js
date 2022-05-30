@@ -5,7 +5,7 @@ var arrTree = [];
 var newFactory;
 var interval = 800;
 var counter = 1;
-var countStr = "Êðóæêà íîìåð ";
+var countStr = "Кружка номер";
 
 function createGame() {
     for (let i = 0; i < 30; i++) {
