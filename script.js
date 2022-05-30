@@ -5,7 +5,18 @@ var arrTree = [];
 var newFactory;
 var interval = 800;
 var counter = 1;
-var countStr = "Кружка номер ";
+var countStr = "ГЉГ°ГіГ¦ГЄГ  Г­Г®Г¬ГҐГ° ";
+
+function createGame() {
+    for (let i = 0; i < 30; i++) {
+        let a = document.querySelector('.game');
+        let b = document.createElement('div');
+        b.classList.add('box');
+        b.setAttribute('data-value', i);
+        a.appendChild(b);   
+    }
+    
+}
 
 function createGame() {
     for (let i = 0; i < 30; i++) {
@@ -26,8 +37,7 @@ function replay() {
             box.classList.remove('tree');
 
         });
-        counter += 1;
-        document.querySelector('.counter').innerHTML = countStr + counter;
+        
         document.querySelector('.hidden').classList.add('levelUp')
         let bang = document.querySelector('.won');
         newFactory = setInterval(randomFactory, 600);
@@ -43,7 +53,8 @@ function addTree(e) {
         arrTree.push(c.dataset.value);
         if(arrTree.length == 30) {
             clearInterval(newFactory);
-            
+            counter += 1;
+            document.querySelector('.counter').innerHTML = countStr + counter;
             document.querySelector('.hidden').classList.remove('levelUp');
             let bang = document.querySelector('.won');
             bang.style.animation = 'won .6s ease-in-out';
