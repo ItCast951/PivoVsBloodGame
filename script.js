@@ -1,4 +1,3 @@
-import TelegramGameProxy from 'TelegramGameProxy'
 const game = document.querySelector('.game');
 var arrFactory = [];
 var arrTree = [];
