@@ -5,7 +5,6 @@ var newFactory;
 var interval = 800;
 var counter = 1;
 var countStr = "Кружка номер ";
-const TelegramBot = require('node-telegram-bot-api');
 
 
 function createGame() {
