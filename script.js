@@ -1,22 +1,12 @@
+
 const game = document.querySelector('.game');
 var arrFactory = [];
 var arrTree = [];
 var newFactory;
-var interval = 800;
+var interval = 1500;
 var counter = 1;
 var countStr = "Кружка номер ";
 
-
-function createGame() {
-    for (let i = 0; i < 30; i++) {
-        let a = document.querySelector('.game');
-        let b = document.createElement('div');
-        b.classList.add('box');
-        b.setAttribute('data-value', i);
-        a.appendChild(b);   
-    }
-    
-}
 
 function createGame() {
     for (let i = 0; i < 30; i++) {
@@ -40,7 +30,7 @@ function replay() {
         
         document.querySelector('.hidden').classList.add('levelUp')
         let bang = document.querySelector('.won');
-        newFactory = setInterval(randomFactory, 600);
+        newFactory = setInterval(randomFactory, 1300);
         bang.style.animation = 'start .6s ease-in-out';
         bang.style.top = '100%';
     });
@@ -115,18 +105,16 @@ box.forEach(function(box) {
 function fire(e) {
     console.log(e.target);
     let trg = e.target;
-    
     const itemDim = this.getBoundingClientRect(),
     itemSize = {
       x: itemDim.right - itemDim.left,
-      y: itemDim.bottom - itemDim.top,
-    };
-    
+        y: itemDim.bottom - itemDim.top,
+        };
     let burst = new mojs.Burst({
         left: itemDim.left + (itemSize.x/2),
         top: itemDim.top + (itemSize.y/1.7),
-        count: 9,
-        radius: {50 : 90},
+        count: 8,
+        radius: {45 : 60},
     });
     burst.play();
 };
